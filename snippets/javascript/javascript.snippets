@@ -263,4 +263,12 @@ snippet timeout
 	
 # AddEventListener
 snippet addE
-	${1:target}.addEventListener('${2:class}', ${0:function_name}, false);
+	${1:target}.addEventListener('${2:event}', ${0:function_name}, false);
+	
+# Main
+snippet main
+	var main = function () {
+		${0}
+	}
+	
+	document.addEventListener("DOMContentLoaded", main, false);
