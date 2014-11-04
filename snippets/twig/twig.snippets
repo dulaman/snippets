@@ -1,4 +1,4 @@
-snippet //
+snippet ##
 	{# ${1} #}
 snippet tw
 	{% ${1} %}
@@ -15,13 +15,16 @@ snippet ife
 snippet block
 	{% block ${1} %}
 	{% endblock %}
-snippet	exte
+snippet	extends
 	{% extends '${1}' %}
-snippet incl
+snippet include
 	{% include '{$2}' %}
 snippet set
 	{% set ${1} = ${2} %}
-snippet tran
-	{{ '${1}'|trans({${2}}, '${3:domain}') }}
-snippet path
-	{{ path('${1:route}', { '${2}' : ${3} }) }}
+snippet forin
+	{% for ${1:item} in ${2:seq} %}
+		${3}
+	{% endfor %}
+snippet else
+	{% else %}
+		${0}
