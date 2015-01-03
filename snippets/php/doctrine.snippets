@@ -1,0 +1,110 @@
+#Converted from raulfraile/sublime-symfony2.git
+
+#Class
+snippet entityclass
+        use Doctrine\ORM\Mapping as ORM;
+        use Symfony\Component\Validator\Constraints as Assert;
+        
+        class ${4:Entity} {
+        
+                /**
+                * @ORM\Id()
+                * @ORM\Column(type="integer")
+                * @ORM\GeneratedValue(strategy="AUTO")
+                */
+                protected \$id;${0}
+                
+        }
+#Repository
+snippet repository
+        use Doctrine\ORM\EntityRepository;
+
+        class ${3:EntityName}Repository extends EntityRepository {
+                
+                ${0}
+                
+        }
+#Array column
+snippet arraycolumn
+        /**
+        * @ORM\Column(type="array"${0})
+        */
+#BigInt column
+snippet bigintcolumn
+        /**
+        * @ORM\Column(type="bigint"${0})
+        */
+#Boolean column
+snippet booleancolumn
+        /**
+        * @ORM\Column(type="boolean"${0})
+        */
+#Date column
+snippet datecolumn
+        /**
+        * @ORM\Column(type="date"${0})
+        */
+#DateTime column
+snippet datetimecolumn
+        /**
+        * @ORM\Column(type="datetime"${0})
+        */
+#Decimal column
+snippet decimalcolumn
+        /**
+        * @ORM\Column(type="decimal", scale=${1:2}${0})
+        */
+#Float column
+snippet floatcolumn
+        /**
+        * @ORM\Column(type="float"${0})
+        */
+#Id column
+snippet idcolumn
+        /**
+        * @ORM\Column(name="id", type="integer", nullable=false)
+        * @ORM\Id()
+        * @ORM\GeneratedValue(strategy="IDENTITY")
+        */
+#Integer column
+snippet integercolumn
+        /**
+        * @ORM\Column(type="integer"${0})
+        */
+#Object column
+snippet objectcolumn
+        /**
+        * @ORM\Column(type="object"${0})
+        */
+#SmallInt column
+snippet smallintcolumn
+        /**
+        * @ORM\Column(type="smallint"${0})
+        */
+#String column
+snippet stringcolumn
+        /**
+        * @ORM\Column(type="string", length=${1:255}${0})
+        */
+#Text column
+snippet textcolumn
+        /**
+        * @ORM\Column(type="text"${0})
+        */
+#Time column
+snippet timecolumn
+        /**
+        * @ORM\Column(type="time"${0})
+        */
+#Associations
+#Many-To-One
+snippet manytoonecolumn
+        /**
+        * @ORM\ManyToOne(targetEntity="${1}")
+        * @ORM\JoinColumn(name="${2}", referencedColumnName="${3}")
+        */
+#One-To-Many
+snippet onetomanycolumn
+        /**
+        * @ORM\OneToMany(targetEntity="${1}", mappedBy="${2}")
+        */
